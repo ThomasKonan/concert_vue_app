@@ -1,114 +1,88 @@
 <template>
 	  <div id="app">
-	    <div class="toolbar">
-	      <button class="toolbar-button">Create Event</button>
-	      <input class="toolbar-search" type="text" placeholder="Search by Artist...">
-	    </div>
-					<router-view />
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+    		<router-view />
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br />
+                            Clark, MO 65243
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container">
+                <small>
+                    Copyright &copy; Your Website
+                    <!-- This script automatically adds the current year to your website footer-->
+                    <!-- (credit: https://updateyourfooter.com/)-->
+                </small>
+            </div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
 	      </div>
 	</template>
-	<script>
-	export default {
-	  name: 'app'
-	};
-	</script>
-	<style>
-	/* RESET */
-	* {
-	  margin: 0;
-	  padding: 0;
-	  border: 0;
-	  outline: none;
-	  box-sizing: border-box;
-	}
-	/* LAYOUT */
-	#app {
-	  display: flex;
-	  flex-direction: column;
-	  min-height: 100vh;
-	}
-	.toolbar {
-	  padding: 0.5em;
-	}
-	.toolbar-button, .toolbar-search {
-	  padding: inherit;
-	  border-radius: 0.3em;
-	}
-	.toolbar-search {
-	  float: right;
-	}
-	.note-container {
-	  display: flex;
-	  flex: 1;
-	}
-	.note-selectors {
-	  flex: 0 0 13em;
-	}
-	.note-selector {
-	  padding: 1em;
-	}
-	.note-selector p {
-	  margin: 0;
-	}
-	.note-editor {
-	  display: flex;
-	  flex: 1;
-	  flex-direction: column;
-	}
-	.note-editor-info {
-	  padding: 0.5em;
-	  text-align: center;
-	}
-	.note-editor-input {
-	  display: flex;
-	  flex: 1;
-	  width: 100%;
-	  padding: 0 2em 0 2em;
-	}
-	/* COLORS */
-	* {
-	  color: #454545;
-	  background-color: #FAFAF8;
-	}
-	.toolbar {
-	  background-color: #c77c19;
-	}
-	.toolbar-button {
-	  background-color: #FFFFFF;
-	}
-	.toolbar-button:active {
-	  background-color: #AAAAAA;
-	}
-	.note-selectors {
-	  border-right: 1px solid #DCDADC;
-	}
-	.note-selector {
-	  border-bottom: 1px solid #DCDADC;
-	}
-	.note-selector.active {
-	  background-color: #FCE18D;
-	}
-	.note-selector-title {
-	  background-color: inherit;
-	}
-	.note-selector-timestamp {
-	  color: #626262;
-	  background-color: inherit;
-	}
-	.note-editor-info {
-	  color: #DCDADC;
-	}
-	/* TYPOGRAPHY */
-	body {
-	  font-family: sans-serif;
-	}
-	.note-selector-title {
-	  font-weight: bold;
-	}
-	.note-selector-timestamp {
-	  font-size: 0.7em;
-	}
-	.note-editor, .note-editor-input {
-	  font-size: 0.9em;
-	}
-	</style>
