@@ -2,20 +2,39 @@
   <div class="events-index">
      <section class="page-section portfolio" id="portfolio">
             <div class="container">
- <input type="text" v-model="search">
-    <label for="cars">Choose a car:</label>
-
-    <select v-model="searchType">
-      <option value="Artist">Artist</option>
-      <option value="Location">Location</option>
-    </select>
-    <button v-on:click="indexEvents">Search Artists</button>            
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Name</label>
+                                    <input class="form-control" v-model="search" id="name" type="text" placeholder="Artist or location" required="required" data-validation-required-message="Please enter your name." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <select v-model="searchType">
+                            <option>Artist</option>
+                            <option>Location</option>
+                            </select>
+                            <select v-model="searchType" class="form-select" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option value="1">Artist</option>
+                              <option value="2">Location</option>
+                            </select>
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
+                        </form>
+                    </div>
+                </div>      
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-music"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Grid Items-->
@@ -26,19 +45,11 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                            <img class="img-fluid" v-bind:src="`assets/img/portfolio/${images[Math.floor(Math.random() * images.length)]}`" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
                     <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5" v-for="event in events">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                        </div>
-                    </div>
                     <!-- Portfolio Item 4-->
                 </div>
             </div>
@@ -51,7 +62,7 @@
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-book"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
@@ -72,11 +83,11 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon"><i class="fa fa-envelope"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Form-->
@@ -135,11 +146,11 @@
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-icon"><i class="fa fa-music"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin-2.jpeg" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">{{ selectedEvent.display_name }}</p>
                                     <p class="mb-5">{{ selectedEvent.location.city }}</p>
@@ -169,6 +180,7 @@ export default {
       search: "",
       searchType: "",
       selectedEvent: {location:""},
+      images: ["cabin-2.jpeg", "heavy-metal-band.jpeg", "run-the-jewels.jpeg"]
     };
   },
   created: function() {
