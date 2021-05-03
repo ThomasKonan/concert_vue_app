@@ -3,7 +3,7 @@
 		<h1 class="contact-form_title">Contact Form</h1>
 		<div class="separator"></div>
 
-		<div v-if="isSending" class="loading">Sendig...</div>
+		<div v-if="isSending" class="loading">Sending...</div>
 
 		<form class="form" @submit="onSubmit">
 			<input required name="name" v-model='contact.name' placeholder="Name" type="text" autocomplete="off">

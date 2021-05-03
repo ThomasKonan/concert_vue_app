@@ -46,12 +46,13 @@ const routes = [
   {
     path: '/signup',
     name: 'Signup',
-    component: Signup
+    component: () => import('../views/Signup.vue')
   },
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    meta: { disableIfLoggedIn: true},
+    component: () => import('../views/Login.vue'),
   },
   {
     path: '/logout',

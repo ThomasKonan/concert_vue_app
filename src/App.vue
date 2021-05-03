@@ -16,7 +16,8 @@
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Favorites</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#/login">Login/Signup</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">Login</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signup">Signup</a></li>
                     </ul>
 										<img src="assets/img/Music-Folder.png"/>
                 </div>
@@ -31,18 +32,34 @@
 							<li data-target="#demo" data-slide-to="0" class="active"></li>
 							<li data-target="#demo" data-slide-to="1"></li>
 							<li data-target="#demo" data-slide-to="2"></li>
+							<li data-target="#demo" data-slide-to="3"></li>
+							<li data-target="#demo" data-slide-to="4"></li>
+							<li data-target="#demo" data-slide-to="5"></li>
+							<li data-target="#demo" data-slide-to="6"></li>
 						</ul>
 
 						<!-- The slideshow -->
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="https://beardedgentlemenmusic.com/wp-content/uploads/2015/08/The-Replacments-Reunion.jpg" alt="The Replacements" class="rounded">
+								<img src="/assets/img/portfolio/the-replacements.jpeg" alt="The Replacements" class="rounded">
 							</div>
 							<div class="carousel-item">
-								<img src="https://cdn.pastemagazine.com/www/articles/2017/01/19/RTJPics_Main.jpg" alt="Chicago" class="rounded">
+								<img src="/assets/img/portfolio/run-the-jewels.jpeg" alt="Run The Jewels" class="rounded">
 							</div>
 							<div class="carousel-item">
-								<img src="https://townsquare.media/site/366/files/2019/07/Iron_Maiden_Barclays_Center_2019-1.jpg?w=980&q=75" alt="New York" class="rounded">
+								<img src="/assets/img/portfolio/iron-maiden.jpeg" alt="Iron Maiden" class="rounded">
+							</div>
+							<div class="carousel-item">
+								<img src="/assets/img/portfolio/wilco.jpeg" alt="Wilco" class="rounded">
+							</div>
+							<div class="carousel-item">
+								<img src="/assets/img/portfolio/flaming-lips.jpeg" alt="" class="rounded">
+							</div>
+							<div class="carousel-item">
+								<img src="/assets/img/portfolio/phoebe-bridgers.jpeg" alt="" class="rounded">
+							</div>
+							<div class="carousel-item">
+								<img src="/assets/img/portfolio/sturgill.jpeg" alt="" class="rounded">
 							</div>
 						</div>
 
