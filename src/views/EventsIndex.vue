@@ -29,7 +29,7 @@
                             <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
                         </form>
                       </div>
-                    <div class="col-lg-8 mx-auto" >
+                      <div class="col-lg-8 mx-auto" >
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
