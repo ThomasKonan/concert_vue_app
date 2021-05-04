@@ -29,6 +29,25 @@
                             <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
                         </form>
                       </div>
+                    <div class="col-lg-8 mx-auto" >
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Name</label>
+                                    <input class="form-control" id="name" type="text" placeholder="Search Past Events" required="required" data-validation-required-message="Please enter your name." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option>Artist</option>
+                              <option>Location</option>
+                            </select>
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
+                        </form>
+                     </div>
                 </div>      
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
