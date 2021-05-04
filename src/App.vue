@@ -1,8 +1,8 @@
 <template>
 	  <div id="app">
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top py-lg-2" id="mainNav">
             <div class="container">
-								<img src="assets/img/music-listen-avatar.png" style="float:left"/>
+								<img src="assets/img/music-listen-avatar.png"/>
                 <a class="navbar-brand js-scroll-trigger" href="/events">Recytal</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -10,14 +10,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#upcoming_events">Upcoming Events</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#past_events">Past Events</a></li>
+												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#upcoming_events">Upcoming Events</a></li>
+												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#past_events">Past Events</a></li>
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Favorites</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/events/#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/events/#contact">Contact</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!getUserId()" href="/login">Login</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!getUserId()" href="/signup">Signup</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="isLoggedIn()" href="/logout">Logout</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!isLoggedIn()" href="/login">Login</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!isLoggedIn()" href="/signup">Signup</a></li>
                     </ul>
 										<img src="assets/img/Music-Folder.png"/>
                 </div>
@@ -41,7 +41,7 @@
 						<!-- The slideshow -->
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="/assets/img/portfolio/the-replacements.jpeg" alt="The Replacements" class="rounded">
+								<img src="/assets/img/portfolio/the-replacements.jpeg" alt="The Replacements" class="rounded" height="500">
 							</div>
 							<div class="carousel-item">
 								<img src="/assets/img/portfolio/run-the-jewels.jpeg" alt="Run The Jewels" class="rounded">
@@ -56,7 +56,7 @@
 								<img src="/assets/img/portfolio/flaming-lips.jpeg" alt="" class="rounded">
 							</div>
 							<div class="carousel-item">
-								<img src="/assets/img/portfolio/phoebe-bridgers.jpeg" alt="" class="rounded">
+								<img src="/assets/img/portfolio/phoebe-bridgers.jpeg" alt="" class="rounded" height="500">
 							</div>
 							<div class="carousel-item">
 								<img src="/assets/img/portfolio/sturgill.jpeg" alt="" class="rounded">
@@ -96,7 +96,7 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
-                            294 Washington St.
+                            200 Washington St.
                             <br />
                             Boston, MA 02108
                         </p>
@@ -111,10 +111,10 @@
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <h4 class="text-uppercase mb-4">About Recytal</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            Recytal is a free to use. Created by TK.
+                            
                             .
                         </p>
                     </div>

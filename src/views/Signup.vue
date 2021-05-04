@@ -1,33 +1,31 @@
 <template>
-    <div class="mx-auto pb-5 pt-5" style="width: 500px;">
-      <div class="signup">
-        <form v-on:submit.prevent="submit()">
-          <h1>Sign Up</h1>
-          <ul>
-            <li class="text-danger" v-for="error in errors" v-bind:key="error">
-              {{ error }}
-            </li>
-          </ul>
-          <div class="form-group">
-            <label>Name:</label> 
-            <input type="text" class="form-control" v-model="name">
-          </div>
-          <div class="form-group">
-            <label>Email:</label>
-            <input type="email" class="form-control" v-model="email">
-          </div>
-          <div class="form-group">
-            <label>Password:</label>
-            <input type="password" class="form-control" v-model="password">
-          </div>
-          <div class="form-group">
-            <label>Password confirmation:</label>
-            <input type="password" class="form-control" v-model="passwordConfirmation">
-          </div>
-          <input type="submit" class="btn btn-primary" value="Submit">
-        </form>
+  <div class="mx-auto pb-5 pt-5 signup" style="width: 500px;">
+    <form v-on:submit.prevent="submit()">
+      <h1>Sign up</h1>
+      <ul>
+        <li class="text-danger" v-for="error in errors" v-bind:key="error">
+          {{ error }}
+        </li>
+      </ul>
+      <div class="form-group">
+        <label>Name:</label> 
+        <input type="text" class="form-control" v-model="name">
       </div>
-    </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" v-model="email">
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" v-model="password">
+      </div>
+      <div class="form-group">
+        <label>Password confirmation:</label>
+        <input type="password" class="form-control" v-model="passwordConfirmation">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+  </div>
 </template>
 
 <script>
@@ -64,4 +62,3 @@ export default {
   }
 };
 </script>
-

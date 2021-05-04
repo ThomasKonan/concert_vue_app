@@ -4320,7 +4320,6 @@ input[type="button"].btn-block {
 .navbar-brand:focus {
   text-decoration: none;
 }
-
 .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -6242,6 +6241,7 @@ a.close.disabled {
 
 .carousel {
   position: relative;
+  background-color: black !important;
 }
 
 .carousel.pointer-event {
@@ -6250,8 +6250,8 @@ a.close.disabled {
 
 .carousel-inner {
   position: relative;
-  top: -75px;
-  height: 400px;
+  top: 40pxpx;
+  height: 500px;
   width: 100%;
   overflow: hidden;
 }
@@ -7940,7 +7940,7 @@ button.bg-dark:focus {
 
 .mb-0,
 .my-0 {
-  margin-bottom: 0 !important;
+  margin-bottom: -10 !important;
 }
 
 .ml-0,
@@ -10593,7 +10593,7 @@ a.text-dark:focus {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
+    padding-top: 75px;
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {

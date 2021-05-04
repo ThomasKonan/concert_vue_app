@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Signup from '../views/Signup.vue'
-import Login from '../views/Login.vue'
-import Logout from '../views/Logout.vue'
-import SetlistsIndex from '../views/SetlistsIndex.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import Signup from "../views/Signup.vue";
+import Login from '../views/Login.vue';
+import Logout from '../views/Logout.vue';
+import SetlistsIndex from '../views/SetlistsIndex.vue';
 // import EventsIndex from '../views/EventsShow.vue'
 // import EventsNew from '../views/EventsNew.vue'
 import EventsIndex from '../views/EventsIndex.vue'
