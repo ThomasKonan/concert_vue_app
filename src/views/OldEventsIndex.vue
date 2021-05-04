@@ -4,50 +4,30 @@
             <div class="container">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
                 <div class="row">
-                    <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fa fa-search"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                    <div class="col-lg-8 mx-auto" >
+                    <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Name</label>
-                                    <input class="form-control" v-model="search" id="name" type="text" placeholder="Search Upcoming Events" required="required" data-validation-required-message="Please enter your name." />
+                                    <input class="form-control" v-model="search" id="name" type="text" placeholder="Artist or location" required="required" data-validation-required-message="Please enter your name." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+                            <select v-model="searchType">
+                            <option>Artist</option>
+                            <option>Location</option>
+                            </select>
                             <select v-model="searchType" class="form-select" aria-label="Default select example">
                               <option selected>Open this select menu</option>
-                              <option>Artist</option>
-                              <option>Location</option>
+                              <option value="1">Artist</option>
+                              <option value="2">Location</option>
                             </select>
                             <br />
                             <div id="success"></div>
                             <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
                         </form>
-                      </div>
-                      <div class="col-lg-8 mx-auto" >
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Name</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Search Past Events" required="required" data-validation-required-message="Please enter your name." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <select class="form-select" aria-label="Default select example">
-                              <option selected>Open this select menu</option>
-                              <option>Artist</option>
-                              <option>Location</option>
-                            </select>
-                            <br />
-                            <div id="success"></div>
-                            <div class="form-group"><button class="btn btn-primary btn-xl" v-on:click="indexEvents" id="sendMessageButton" type="submit">Send</button></div>
-                        </form>
-                     </div>
+                    </div>
                 </div>      
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
@@ -87,11 +67,15 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Recytal is a free online community where you can track your favorite artists and venues, share and stream content and revisit some of your favorite memories from live events all in one place.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">You can stay informed of tours and events, find ticket info, stream videos and view recent setlists, connect with other fans and listen to playlists filled with content curated to your interests.</p></div>
+                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                        <i class="fas fa-download mr-2"></i>
+                        Free Download!
+                    </a>
                 </div>
             </div>
         </section>
@@ -196,7 +180,7 @@ export default {
       search: "",
       searchType: "",
       selectedEvent: {location:""},
-      images: ["live-concert-1.jpeg", "live-concert-2.jpeg", "live-concert-3.jpeg", "live-concert-4.jpeg", "live-concert-5.jpeg", "live-concert-6.jpeg", "live-concert-7.jpeg", "live-concert-8.jpeg", "live-concert-9.jpeg", "live-concert-10.jpeg", "live-concert-11.jpeg", "live-concert-12.jpeg", "live-concert-13.jpeg", "live-concert-14.jpeg", "live-concert-15.jpeg", "live-concert-16.jpeg", "live-concert-17.jpeg", "live-concert-18.jpeg", "live-concert-19.jpeg", "live-concert-20.jpeg", "live-concert-21.jpeg"]
+      images: ["cabin-2.jpeg", "heavy-metal-band.jpeg", "run-the-jewels.jpeg"]
     };
   },
   created: function() {

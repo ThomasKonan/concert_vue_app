@@ -1,8 +1,8 @@
 <template>
-    <div class="mx-auto" style="width: 500px;">
+    <div class="mx-auto pb-5 pt-5" style="width: 500px;">
       <div class="signup">
         <form v-on:submit.prevent="submit()">
-          <h1>Signup</h1>
+          <h1>Sign Up</h1>
           <ul>
             <li class="text-danger" v-for="error in errors" v-bind:key="error">
               {{ error }}

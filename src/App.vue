@@ -3,8 +3,7 @@
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
 								<img src="assets/img/music-listen-avatar.png" style="float:left"/>
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Recytal</a>
-
+                <a class="navbar-brand js-scroll-trigger" href="/events">Recytal</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -14,10 +13,11 @@
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#upcoming_events">Upcoming Events</a></li>
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#past_events">Past Events</a></li>
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Favorites</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">Login</a></li>
-												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signup">Signup</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/events/#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/events/#contact">Contact</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!getUserId()" href="/login">Login</a></li>
+												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-if="!getUserId()" href="/signup">Signup</a></li>
                     </ul>
 										<img src="assets/img/Music-Folder.png"/>
                 </div>
@@ -138,4 +138,21 @@
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
 	      </div>
-	</template>
+</template>
+	<script>
+		export default {
+			methods: {
+				isLoggedIn: function() {
+					console.log('logged in');
+					if (localStorage.getItem("jwt")) {
+						return true;
+					} else {
+						return false;
+					}
+				},
+				getUserId: function() {
+					return localStorage.getItem("user_id");
+				}
+			}
+		}
+	</script>
