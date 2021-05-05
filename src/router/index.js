@@ -24,11 +24,7 @@ const routes = [
     name: 'SetlistsIndex',
     component: SetlistsIndex
   },
-  // {
-  //   path: '/events',
-  //   name: 'EventsIndex',
-  //   component: EventsIndex
-  // },
+
   // {
   //   path: '/events/new',
   //   name: 'EventsNew',

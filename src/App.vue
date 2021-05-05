@@ -3,15 +3,15 @@
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top py-lg-2" id="mainNav">
             <div class="container">
 								<img src="assets/img/music-listen-avatar.png"/>
-                <a class="navbar-brand js-scroll-trigger" href="#events">Recytal</a>
+                <a class="navbar-brand js-scroll-trigger" href="events?#events">Recytal</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#upcoming_events">Upcoming Events</a></li>
-												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#past_events">Past Events</a></li>
+												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/events?#events">Upcoming Events</a></li>
+												<li class="nav-item mx-0 mx-lg-1 text-nowrap"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/setlists">Past Events</a></li>
 												<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#favorites">Favorites</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>

@@ -52,7 +52,7 @@
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        if ($("#mainNav").offset().top > 100) {
+        if ($("#mainNav").offset()?.top > 100) {
             $("#mainNav").addClass("navbar-shrink");
         } else {
             $("#mainNav").removeClass("navbar-shrink");
@@ -85,7 +85,7 @@ $(document).ready(function(e){
           $('.input-group #search_param').val(param);
          });
     });
-var a = document.getElementByTagName('a').item(0);
+var a = document.getElementsByTagName('a').item(0);
 $(a).on('keyup', function(evt){
 console.log(evt);
 if(evt.keycode === 13){
